@@ -1,0 +1,11 @@
+{
+  "name": "nexus-blog",
+  "version": "1.0.0",
+  "description": "Example used in the Schema First Blog Post",
+  "main": "dist/api/index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

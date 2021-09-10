@@ -1,0 +1,13 @@
+{
+  "name": "@nexusblog/api-apollo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --no-notify index.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "graphql": "^15.5.3"
+  }
+}
