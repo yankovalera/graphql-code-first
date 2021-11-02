@@ -62,15 +62,15 @@ export const db: Db = {
       carts.push(cart);
     }
 
-    const savedProductCount = cart.cartProducts.get(productId) || {
+    const savedProductCount = cart!.cartProducts.get(productId) || {
       count: 0,
       productId: input.productId,
     };
 
     savedProductCount.count += count;
 
-    cart.cartProducts.set(input.productId, savedProductCount);
+    cart!.cartProducts.set(input.productId, savedProductCount);
 
-    return cart;
+    return cart!;
   },
 };

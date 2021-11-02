@@ -1,0 +1,16 @@
+{
+  "name": "@nexusblog/api-typegraphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --no-notify index.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "class-validator": "^0.13.1",
+    "graphql": "^15.5.3",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  }
+}
