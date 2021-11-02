@@ -1,4 +1,5 @@
-import { ObjectType, Field, ID, Root, Ctx } from "type-graphql";
+import { ObjectType, Field, Root, Ctx } from "type-graphql";
+import { BaseCartProduct } from "../cart/BaseCartProduct";
 import {
   CartProduct as CartProductEntity,
   Product as ProductEntity,
@@ -7,10 +8,7 @@ import { Product } from "../product/Product";
 import { Context } from "../../context";
 
 @ObjectType()
-export class CartProduct {
-  @Field((type) => ID)
-  count: number;
-
+export class CartProduct extends BaseCartProduct {
   @Field((type) => Product)
   product(@Root() parent: CartProductEntity, @Ctx() ctx: Context) {
     return ctx.db.products.find(

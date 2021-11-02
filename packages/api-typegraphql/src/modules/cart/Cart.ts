@@ -1,5 +1,5 @@
 import { ObjectType, Field, ID } from "type-graphql";
-import { CartProduct } from "./CartProduct";
+import { CartProduct } from "../product/CartProduct";
 
 @ObjectType()
 export class Cart {

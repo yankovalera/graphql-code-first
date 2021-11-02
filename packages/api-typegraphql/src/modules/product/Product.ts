@@ -1,4 +1,4 @@
-import { ObjectType, Field, ID, Root } from "type-graphql";
+import { ObjectType, Field, ID, Root, Int } from "type-graphql";
 import { Product as ProductEntity } from "@nexusblog/db";
 
 @ObjectType()
@@ -7,13 +7,13 @@ export class Product {
   id: string;
 
   @Field()
-  inStock(@Root() product: ProductEntity): boolean {
-    return product.stock > 0;
-  }
+  title: string;
 
-  @Field()
+  @Field((type) => Int)
   price: number;
 
   @Field()
-  title: string;
+  inStock(@Root() product: ProductEntity): boolean {
+    return product.stock > 0;
+  }
 }
